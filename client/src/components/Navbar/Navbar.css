@@ -1,0 +1,101 @@
+/* Style for the navigation bar */
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between; /* Align logo on the left and cart on the right */
+    align-items: center; /* Vertically center the items */
+    box-shadow: #333;
+  }
+  
+
+  
+  
+  /* Style for the container that holds the navigation list and cart */
+  .nav-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the navigation list */
+  .nav-list {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style for the list items */
+  .nav-list li {
+    margin: 0 15px;
+  }
+  
+  /* Style for the links */
+  .nav-list li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s, border-color 0.3s;
+  }
+  
+  /* Hover effect for links */
+  .nav-list li a:hover {
+    color: #ff9900;
+    border-color: #ff9900;
+  }
+  
+  /* Style for the cart link */
+  .cart-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Style for the cart icon */
+  .cart-icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+    color: aliceblue;
+  }
+  .cart-icon:hover{
+    transform: matrix(0.2rem);
+    color: #ff9900;
+  }
+  
+  /* Style for the cart badge */
+  .badge {
+    background-color: #ff9900;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Style for the logo container */
+.logo {
+    font-family: "Arial", sans-serif; /* Choose an appropriate font-family */
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold;
+    font-size: 24px; /* Adjust the font size as needed */
+    color: #333; /* Set the text color */
+    letter-spacing: 2px; /* Adjust letter spacing as needed */
+    text-align: center; /* Center the text horizontally */
+  }
+  
+  /* Style for line break between CITYSTREETS and FOOTWARE */
+  .logo br {
+    margin-bottom: 5px;
+    border-top: 1px solid #333; 
+    
+    /* display: none; Hide the line break */
+  }
+  
+  /* Style for the part of the text that needs a different color */
+  .logo span {
+    color: #ff9900; /* Set a different color for FOOTWARE */
+  }
+  

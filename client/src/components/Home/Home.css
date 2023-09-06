@@ -1,0 +1,131 @@
+/* Home.css */
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Create two equal-width columns */
+  background-color: #f0f0f0; /* Set your desired background color */
+  height: 100vh; /* Make the container 100% of the viewport height */
+  width: 100vw; /* Make the container 100% of the viewport width */
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+}
+
+.image-box,
+.triangle-box {
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* Home.css */
+
+/* ... Previous CSS rules ... */
+
+.text-overlay {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Background color */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #fff; /* Text color */
+  text-align: center; /* Center-align the text */
+  font-weight: bold; /* Make the text bold */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 2px; /* Add letter spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow */
+}
+/* Add hover effect */
+.image-box:hover img,
+.triangle-box:hover img {
+  opacity: 0.8; /* Lower opacity on hover */
+}
+
+
+
+/* Home.css */
+
+/* Style for the home container */
+.home-container {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  align-items: center; /* Center-align children horizontally */
+}
+
+/* Style for the container with your content (if needed) */
+
+
+/* Style for the footer */
+.footer {
+  background-color: #26272b;
+  padding: 20px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  width: 100%; /* Make the footer span the full width */
+}
+  /* <-----footer button---------> */
+
+  .button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    background:#ff9900;
+    color: white;
+    padding: 0.35em 0;
+    font-size: 17px;
+    border: none;
+    border-radius: 0.7em;
+    letter-spacing: 0.08em;
+    position: relative;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    overflow: hidden;
+    height: 2.7em;
+    padding-left: 3em;
+    padding-right: 0.5em;
+  }
+  
+  .button .icon {
+    background: #fff;
+    margin-right: 1em;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.5em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0.2em;
+    transition: all .7s;
+    gap: 10px;
+  }
+  
+  .shere {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  
+  .button:hover .icon {
+    width: calc(100% - 0.6rem);
+  }
+  
+  .button:hover .shere {
+    width: calc(100% - 0.6rem);
+    display: none;
+  }
+  
+  .button .icon-shere {
+    color: #f2295b;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: none;
+  }
+  
+  .button:hover .icon .icon-shere {
+    display: flex;
+  }
