@@ -1,7 +1,138 @@
-import React from 'react';
-import './Register.css'
+// import React from 'react';
+// import './Register.css'
+
+// const Register = () => {
+//   return (
+//     <div>
+//       <div className="wrapper">
+//         <div className="card-switch">
+//           <label className="switch">
+//             <input type="checkbox" className="toggle" />
+//             <span className="slider"></span>
+//             <span className="card-side"></span>
+//             <div className="flip-card__inner">
+//               <div className="flip-card__front">
+//                 <div className="title">Log in</div>
+//                 <form className="flip-card__form" action="">
+//                   <input className="flip-card__input" name="email" placeholder="Email" type="email" />
+//                   <input className="flip-card__input" name="password" placeholder="Password" type="password" />
+//                   <button className="flip-card__btn">Let's go!</button>
+//                 </form>
+//               </div>
+//               <div className="flip-card__back">
+//                 <div className="title">Sign up</div>
+//                 <form className="flip-card__form" action="">
+//                   <input className="flip-card__input" placeholder="Name" type="text" />
+//                   <input className="flip-card__input" name="email" placeholder="Email" type="email" />
+//                   <input className="flip-card__input" name="password" placeholder="Password" type="password" />
+//                   <button className="flip-card__btn">Confirm!</button>
+//                 </form>
+//               </div>
+//             </div>
+//           </label>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default Register;
+
+
+
+
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import './Register.css';
 
 const Register = () => {
+  const [loginLink, setLoginLink] = useState('');
+  const [registerLink, setRegisterLink] = useState('');
+  const [bearerToken, setBearerToken] = useState('');
+
+  useEffect(() => {
+    // Define your backend API URL
+    const backendUrl = 'http://localhost:3001';
+
+    // Define the API endpoints for login and register
+    const loginEndpoint = '/auth/sign_in'; // Updated login endpoint
+    const registerEndpoint = '/auth'; // Update this endpoint
+
+    // Make an Axios GET request to fetch the login link
+    axios.get(backendUrl + loginEndpoint)
+      .then((response) => {
+        // Assuming your backend responds with a JSON object containing the login link
+        setLoginLink(response.data.loginLink);
+      })
+      .catch((error) => {
+        console.error('Error fetching login link:', error);
+      });
+
+
+      
+    // Make an Axios GET request to fetch the register link
+    axios.post(backendUrl + registerEndpoint)
+      .then((response) => {
+        // Assuming your backend responds with a JSON object containing the register link
+        setRegisterLink(response.data.registerLink);
+      })
+      .catch((error) => {
+        console.error('Error fetching register link:', error);
+      });
+  }, []);
+  const handleRegistration = async (event) => {
+    event.preventDefault();
+    const name = event.target.name.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    const passwordConfirmation = event.target.password_confirmation.value;
+  
+    try {
+      // Make an Axios POST request to your registration endpoint with registration data
+      const response = await axios.post("http://localhost:3001/auth", {
+        name,
+        email,
+        password,
+        password_confirmation: passwordConfirmation // Ensure the field name matches your backend's expectations
+      });
+  
+      // Assuming your backend responds with a bearer token
+      const token = response.headers.authorization; // Assuming the token is in the "authorization" header
+      setBearerToken(token);
+  
+      // Now you can use the token for authenticated requests
+    } catch (error) {
+      console.error('Error registering:', error);
+    }
+  };
+
+  // Function to handle login and store the bearer token
+  const handleLogin = async (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    try {
+      // Make an Axios POST request to your login endpoint with email and password
+      const response = await axios.post("http://localhost:3001/auth/sign_in", {
+        email,
+        password
+      });
+      
+
+      // Assuming your backend responds with a bearer token
+      const token = response.headers.authorization; // Assuming the token is in the "authorization" header
+      setBearerToken(token);
+
+      // Now you can use the token for authenticated requests
+    } catch (error) {
+      console.error('Error logging in:', error);
+    }
+  };
+
+ 
+
+
   return (
     <div>
       <div className="wrapper">
@@ -13,18 +144,22 @@ const Register = () => {
             <div className="flip-card__inner">
               <div className="flip-card__front">
                 <div className="title">Log in</div>
-                <form className="flip-card__form" action="">
+                <form className="flip-card__form" onSubmit={handleLogin}>
                   <input className="flip-card__input" name="email" placeholder="Email" type="email" />
                   <input className="flip-card__input" name="password" placeholder="Password" type="password" />
-                  <button className="flip-card__btn">Let's go!</button>
+                  <button className="flip-card__btn" type="submit">Let's go!</button>
                 </form>
               </div>
               <div className="flip-card__back">
                 <div className="title">Sign up</div>
-                <form className="flip-card__form" action="">
+                <form className="flip-card__form" onSubmit={handleRegistration}>
+
+                {/* <form className="flip-card__form" action=""> */}
                   <input className="flip-card__input" placeholder="Name" type="text" />
                   <input className="flip-card__input" name="email" placeholder="Email" type="email" />
                   <input className="flip-card__input" name="password" placeholder="Password" type="password" />
+                  <input className="flip-card__input" name="password_confirmation" placeholder="Password_confrimation" type="password" />
+
                   <button className="flip-card__btn">Confirm!</button>
                 </form>
               </div>
