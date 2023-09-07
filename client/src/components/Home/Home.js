@@ -1,46 +1,4 @@
 
-// import React from "react";
-// import image1 from "./female-shoes.jpg";
-// import image2 from "./male-shoes.jpg";
-// import bulk from "./shoes.jpg";
-// import "./Home.css";
-
-// const Home = () => {
-//   return (
-//     <div>
-//       <div className="container">
-//         <a href="/link-to-female-shoes-page" className="image-box">
-//           <img src={image1} alt="Female Shoes" />
-//           <div className="text-overlay">Shop Women's Shoes</div>
-//         </a>
-//         <a href="/link-to-male-shoes-page" className="triangle-box">
-//           <img src={image2} alt="Male Shoes" />
-//           <div className="text-overlay">Shop Men's Shoes</div>
-//         </a>
-//       </div>
-
-//       {/* Footer Section */}
-//       <footer className="footer">
-//         <div className="footer-content">
-//           <p>&copy; 2023 Your Company Name. All rights reserved.</p>
-//         </div>
-        
-//       </footer>
-
-
-
-      
-//     </div>
-      
-     
-    
-//   );
-// };
-
-// export default Home;
-  
-
-
 
 import React from "react";
 import image1 from "./female-shoes.jpg";
@@ -58,7 +16,7 @@ const Home = () => {
             <img src={image1} alt="Female Shoes" />
             <div className="text-overlay">Shop Women's Shoes</div>
           </a>
-          <a href="/link-to-male-shoes-page" className="triangle-box">
+          <a href="/men" className="triangle-box">
             <img src={image2} alt="Male Shoes" />
             <div className="text-overlay">Shop Men's Shoes</div>
           </a>
@@ -68,7 +26,7 @@ const Home = () => {
       {/* Footer Section */}
       <footer className="footer">
         <div className="footer-content">
-          <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+          <p>&copy; 2023 CityStreets Footware. All rights reserved.</p>
           <button class="button">
   <div class="icon">
     <svg height="18" width="18" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024" class="shere">

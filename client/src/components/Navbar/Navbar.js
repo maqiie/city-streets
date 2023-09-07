@@ -1,41 +1,3 @@
-
-// import React from "react";
-// import "./Navbar.css";
-// import { FaShoppingCart } from "react-icons/fa";
-
-// function Navbar() {
-//   return (
-//     <nav className="navbar">
-//       <div className="logo">
-//         <p>
-//           CITYSTREETS<br/>FOOTWARE
-//         </p>
-//       </div>
-//       <ul className="nav-list">
-//         <li>
-//           <a href="#">Home</a>
-//         </li>
-//         <li>
-//           <a href="#">About</a>
-//         </li>
-//         <li>
-//           <a href="#">Services</a>
-//         </li>
-//         <li>
-//           <a href="#">profile</a>
-//         </li>
-//       </ul>
-//       <div className="cart-link">
-//         <a href="#">
-//           <FaShoppingCart className="cart-icon" />
-//           <span className="badge">5</span>
-//         </a>
-//       </div>
-//     </nav>
-//   );
-// }
-
-// export default Navbar;
 import React from "react";
 import "./Navbar.css";
 import { FaShoppingCart, FaHome, FaInfoCircle, FaUser } from "react-icons/fa";
@@ -43,14 +5,18 @@ import { FaShoppingCart, FaHome, FaInfoCircle, FaUser } from "react-icons/fa";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">
-  CITYSTREETS<br />
-  <span>FOOTWARE</span>
-</div>
+      <div className="logo" >
+        <a className="logo"  href="/">
+        CITYSTREETS
+        <br />
+        <span>FOOTWARE</span>
+        </a>
+        
+      </div>
 
       <ul className="nav-list">
         <li>
-          <a href="#">
+          <a href="/">
             <FaHome className="icon" /> Home
           </a>
         </li>
@@ -65,7 +31,7 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#">
+          <a href="/register">
             <FaUser className="icon" /> Profile
           </a>
         </li>
