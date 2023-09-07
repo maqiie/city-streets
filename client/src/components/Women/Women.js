@@ -1,54 +1,52 @@
 import React from "react";
-import "./Men.css";
-import { AiOutlineAntDesign } from "react-icons/ai"; // Example of using a different icon set (Ant Design)
+import "./Women.css";
 import { SiNike, SiAdidas, SiPuma, SiNewbalance } from "react-icons/si";
 import { FaShoePrints, FaUser,FaSignOutAlt } from "react-icons/fa";
 import { GiConverseShoe, GiRunningShoe, GiShoebillStork } from "react-icons/gi";
 
-const Men = () => {
+const Women = () => {
   // Sample data for shoe cards (you can replace this with real data)
   const shoeData = [
     {
       id: 1,
-      name: "Men Shoe 1",
+      name: "Women Shoe 1",
       price: "$99.99",
       image:
-        "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+        "https://images.unsplash.com/photo-1535043934128-cf0b28d52f95?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGVlbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 2,
-      name: "Men Shoe 2",
+      name: "Women Shoe 2",
       price: "$89.99",
       image:
-        "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+        "https://images.unsplash.com/photo-1581101767113-1677fc2beaa8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhlZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60",
     },
     {
-      id: 3,
-      name: "Men Shoe 2",
+        id: 3,
+      name: "Women Shoe 2",
       price: "$89.99",
-      image:
-        "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+      image:"https://images.unsplash.com/photo-1605733513549-de9b150bd70d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhlZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 4,
-      name: "Men Shoe 2",
+      name: "Women Shoe 2",
       price: "$89.99",
       image:
-        "https://images.unsplash.com/photo-1514989940723-e8e51635b782?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+        "https://images.unsplash.com/photo-1591884807537-0bce39888fe0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhlZWxzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 5,
-      name: "Men Shoe 2",
+      name: "Women Shoe 2",
       price: "$89.99",
       image:
-        "https://images.unsplash.com/photo-1603191659812-ee978eeeef76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+        "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdvbWVuJTIwZmFzaGlvbiUyMHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 6,
-      name: "Men Shoe 2",
+      name: "Women Shoe 2",
       price: "$89.99",
       image:
-        "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
+        "https://images.unsplash.com/photo-1670938258821-2956d4ce9c9b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzAyfHx3b21lbiUyMGZhc2hpb24lMjBzaG9lc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     // Add more shoe data as needed
   ];
@@ -57,10 +55,10 @@ const Men = () => {
     // <div>
 
     // </div>
-    <div className="men-container">
+    <div className="women-container">
       <div className="sidebar">
         {/* Sidebar content goes here */}
-        <h2>Men's Shoes</h2>
+        <h2>Women's Shoes</h2>
         <ul>
           <li>
             <a href="/category/sports">
@@ -113,6 +111,7 @@ const Men = () => {
             </a>
           </li>
         </ul>
+      
 
         <div className="bottom-links">
           <a href="/profile">
@@ -153,4 +152,4 @@ const Men = () => {
   );
 };
 
-export default Men;
+export default Women;

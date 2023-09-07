@@ -4,7 +4,7 @@ import "./App.css";
 import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import Men from './components/Men/Men'
-// import Women from './components/'
+import Women from './components/Women/Women'
 import Register from "./components/Register/Resgister";
 
 
@@ -15,7 +15,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/men" element={<Men/>} />
+        <Route path="/women" element={<Women/>} />
         <Route path="/register" element={<Register/>} />
+
 
       </Routes>
       <br>

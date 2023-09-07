@@ -11,6 +11,7 @@
     justify-content: space-between; /* Align logo on the left and cart on the right */
     align-items: center; /* Vertically center the items */
     box-shadow: #333;
+    
   }
   
 
@@ -101,7 +102,7 @@
   
 
   /* Media query for small screens (max-width: 768px) */
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -120,4 +121,4 @@
   .cart-link {
     margin-top: 20px;
   }
-}
+} */

@@ -1,0 +1,364 @@
+/* Men.css */
+body {
+    background-color:rgb(228, 222, 215); /* Replace with your desired background color */
+    margin: 0; /* Reset margin to ensure full coverage */
+    padding: 0; /* Reset padding to ensure full coverage */
+  }
+  
+  .women-container {
+      margin-top: 8px;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      /* background-color: ; */
+      /* position: center; */
+      position: relative; /* Set the position property to control its positioning */
+    top: 100px; /* Adjust the top property to move it down from the top */
+    left: 50px;
+    /* display: flex; */
+    overflow: hidden;
+    }
+    
+ /* Women.css */
+
+/* ... (other styles) */
+
+.sidebar {
+  width: 25%;
+  background-color: #333;
+  padding: 20px;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  z-index: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Pushes "Profile" and "Logout" links to the bottom */
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Updated sidebar ul styles */
+.sidebar ul {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Make the links appear top-down */
+}
+
+/* Style the individual <li> elements if needed */
+.sidebar li {
+  /* margin-bottom: 10px; Add some spacing between the links */
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Pushes these links to the bottom */
+.bottom-links {
+  margin-top: auto;
+}
+
+  
+    
+    /* Men.css */
+body {
+  background-color:rgb(228, 222, 215); /* Replace with your desired background color */
+  margin: 0; /* Reset margin to ensure full coverage */
+  padding: 0; /* Reset padding to ensure full coverage */
+}
+
+.women-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    /* background-color: ; */
+    /* position: center; */
+    position: relative; /* Set the position property to control its positioning */
+  top: 100px; /* Adjust the top property to move it down from the top */
+  left: 50px;
+  /* display: flex; */
+  overflow: hidden;
+  }
+  
+/* Women.css */
+
+/* ... (other styles) */
+
+.sidebar {
+width: 25%;
+background-color: #333;
+padding: 20px;
+box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+color: #fff;
+z-index: 1;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Pushes "Profile" and "Logout" links to the bottom */
+}
+
+.sidebar h2 {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.sidebar a {
+text-decoration: none;
+color: #fff;
+display: block;
+margin-bottom: 10px;
+font-size: 18px;
+}
+
+.sidebar a:hover {
+text-decoration: underline;
+}
+
+/* Updated sidebar ul styles */
+.sidebar ul {
+padding: 0;
+list-style: none;
+display: flex;
+flex-direction: column; /* Make the links appear top-down */
+}
+
+/* Style the individual <li> elements if needed */
+.sidebar li {
+/* margin-bottom: 10px; Add some spacing between the links */
+flex-direction: column;
+flex: 1;
+}
+
+/* Pushes these links to the bottom */
+.bottom-links {
+margin-top: auto;
+}
+
+
+  
+  .shoe-card {
+width: calc(25% - 20px); /* Updated width to display 4 cards per row */
+margin: 10px;
+padding: 20px;
+background-color: #fff;
+box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center; /* Center content vertically */
+}
+
+/* Set a fixed height for the images */
+.shoe-card img {
+max-width: 100%;
+height: 200px; /* Adjust the height as needed */
+margin-bottom: 10px;
+}
+
+.shoe-card h3 {
+font-size: 18px;
+}
+
+.shoe-card p {
+font-size: 16px;
+}
+
+    /* <--------------navbar--------------> */
+    /* Navbar.css */
+
+.nav {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+    font-size: 16px;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  /* <---------add to cart button----> */
+  .CartBtn {
+    width: 140px;
+    height: 40px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(255, 208, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition-duration: .5s;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+  }
+  
+  .IconContainer {
+    position: absolute;
+    left: -50px;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 2;
+    transition-duration: .5s;
+  }
+  
+  .icon {
+    border-radius: 1px;
+  }
+  
+  .text {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    z-index: 1;
+    transition-duration: .5s;
+    font-size: 1.04em;
+    font-weight: 600;
+  }
+  
+  .CartBtn:hover .IconContainer {
+    transform: translateX(58px);
+    border-radius: 40px;
+    transition-duration: .5s;
+  }
+  
+  .CartBtn:hover .text {
+    transform: translate(10px,0px);
+    transition-duration: .5s;
+  }
+  
+  .CartBtn:active {
+    transform: scale(0.95);
+    transition-duration: .5s;
+  }
+
+      /* <--------------navbar--------------> */
+      /* Navbar.css */
+  
+  .nav {
+      background-color: #333;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    
+    .nav a {
+      text-decoration: none;
+      color: #fff;
+      margin: 0 15px;
+      font-size: 16px;
+    }
+    
+    .nav a:hover {
+      text-decoration: underline;
+    }
+    
+    .logo a {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    /* <---------add to cart button----> */
+    .CartBtn {
+      width: 140px;
+      height: 40px;
+      border-radius: 12px;
+      border: none;
+      background-color: rgb(255, 208, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition-duration: .5s;
+      overflow: hidden;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+      position: relative;
+    }
+    
+    .IconContainer {
+      position: absolute;
+      left: -50px;
+      width: 30px;
+      height: 30px;
+      background-color: transparent;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 2;
+      transition-duration: .5s;
+    }
+    
+    .icon {
+      border-radius: 1px;
+    }
+    
+    .text {
+      height: 100%;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgb(17, 17, 17);
+      z-index: 1;
+      transition-duration: .5s;
+      font-size: 1.04em;
+      font-weight: 600;
+    }
+    
+    .CartBtn:hover .IconContainer {
+      transform: translateX(58px);
+      border-radius: 40px;
+      transition-duration: .5s;
+    }
+    
+    .CartBtn:hover .text {
+      transform: translate(10px,0px);
+      transition-duration: .5s;
+    }
+    
+    .CartBtn:active {
+      transform: scale(0.95);
+      transition-duration: .5s;
+    }
