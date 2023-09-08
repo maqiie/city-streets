@@ -54,9 +54,7 @@ const Men = () => {
   ];
 
   return (
-    // <div>
-
-    // </div>
+   
     <div className="men-container">
       <div className="sidebar">
         {/* Sidebar content goes here */}

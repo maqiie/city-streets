@@ -37,7 +37,7 @@ function Navbar() {
         </li>
       </ul>
       <div className="cart-link">
-        <a href="#">
+        <a href="/cart">
           <FaShoppingCart className="cart-icon" />
           <span className="badge">5</span>
         </a>
