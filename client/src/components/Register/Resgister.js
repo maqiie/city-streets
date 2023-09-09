@@ -1,4 +1,7 @@
+
+
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./Register.css";
 
@@ -37,6 +40,7 @@ const Register = () => {
         console.error("Error fetching register link:", error);
       });
   }, []);
+ 
   const handleRegistration = async (event) => {
     event.preventDefault();
     const name = event.target.name.value;
@@ -50,41 +54,78 @@ const Register = () => {
         name,
         email,
         password,
+<<<<<<< HEAD
         password_confirmation: passwordConfirmation, // Ensure the field name matches your backend's expectations
+=======
+        password_confirmation: passwordConfirmation,
+>>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       });
 
       // Assuming your backend responds with a bearer token
       const token = response.headers.authorization; // Assuming the token is in the "authorization" header
       setBearerToken(token);
+<<<<<<< HEAD
 
+=======
+  
+      // Store the token in local storage
+      localStorage.setItem("authToken", token);
+      
+      // Log the token to the console
+      console.log("Bearer Token (Registration):", token);
+  
+>>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       // Now you can use the token for authenticated requests
     } catch (error) {
       console.error("Error registering:", error);
     }
   };
-
+  
   // Function to handle login and store the bearer token
   const handleLogin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-
+  
     try {
       // Make an Axios POST request to your login endpoint with email and password
       const response = await axios.post("http://localhost:3001/auth/sign_in", {
         email,
         password,
       });
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       // Assuming your backend responds with a bearer token
       const token = response.headers.authorization; // Assuming the token is in the "authorization" header
       setBearerToken(token);
+  
+      // Store the token in local storage
+      localStorage.setItem("authToken", token);
+  
+      // Set the "Authorization" header in Axios defaults for future requests
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  
+      // Log the token to the console
+      console.log("Bearer Token (Login):", token);
+      console.log("Login Response:", response);
 
+  
+      // Log a success message
+      console.log("Login successful!");
+  
       // Now you can use the token for authenticated requests
     } catch (error) {
       console.error("Error logging in:", error);
     }
   };
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
 
   return (
     <div>
@@ -118,6 +159,10 @@ const Register = () => {
               <div className="flip-card__back">
                 <div className="title">Sign up</div>
                 <form className="flip-card__form" onSubmit={handleRegistration}>
+<<<<<<< HEAD
+=======
+                  {/* <form className="flip-card__form" action=""> */}
+>>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
                   <input
                     className="flip-card__input"
                     placeholder="Name"
