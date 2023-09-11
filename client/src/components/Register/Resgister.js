@@ -1,7 +1,9 @@
 
 
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, useNavigate } from "react-router-dom"; // Import useNavigate
+
+
 import axios from "axios";
 import "./Register.css";
 
@@ -9,6 +11,9 @@ const Register = () => {
   const [loginLink, setLoginLink] = useState("");
   const [registerLink, setRegisterLink] = useState("");
   const [bearerToken, setBearerToken] = useState("");
+
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     // Define your backend API URL
@@ -74,6 +79,90 @@ const Register = () => {
   };
   
   // Function to handle login and store the bearer token
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   const email = event.target.email.value;
+  //   const password = event.target.password.value;
+  
+  //   try {
+  //     // Make an Axios POST request to your login endpoint with email and password
+  //     const response = await axios.post("http://localhost:3001/auth/sign_in", {
+  //       email,
+  //       password,
+  //     });
+  
+  //     // Assuming your backend responds with a bearer token
+  //     const token = response.headers.authorization; // Assuming the token is in the "authorization" header
+  //     setBearerToken(token);
+  
+  //     // Store the token in local storage
+  //     localStorage.setItem("authToken", token);
+  
+  //     // Set the "Authorization" header in Axios defaults for future requests
+  //     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  
+  //     // Log the token to the console
+  //     console.log("Bearer Token (Login):", token);
+  //     console.log("Login Response:", response);
+
+  
+  //     // Log a success message
+  //     console.log("Login successful!");
+  
+  //     // Now you can use the token for authenticated requests
+  //   } catch (error) {
+  //     console.error("Error logging in:", error);
+  //   }
+  // };
+  
+  
+  
+      
+  // const handleLogin = async (event) => {
+  //   event.preventDefault();
+  //   const email = event.target.email.value;
+  //   const password = event.target.password.value;
+  
+  //   try {
+  //     // Make an Axios POST request to your login endpoint with email and password
+  //     const response = await axios.post("http://localhost:3001/auth/sign_in", {
+  //       email,
+  //       password,
+  //     });
+  
+  //     // Log the entire response object to the console for debugging
+  //     console.log("Login Response:", response);
+  
+  //     // Assuming your backend responds with a bearer token and user data
+  //     const token = response.headers.authorization; // Assuming the token is in the "authorization" header
+  //     setBearerToken(token);
+  
+  //     // Store the token in local storage
+  //     localStorage.setItem("authToken", token);
+  
+  //     // Set the "Authorization" header in Axios defaults for future requests
+  //     axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+  
+  //     // Extract the user object from response.data
+  //     const user = response.data.data; // Assuming user data is nested under the "data" key
+  
+  //     // Log the user data from the response
+  //     console.log("User Data:", user);
+  
+  //     if (user.role === "admin" && user.admin === true) {
+  //       // If the user is an admin, navigate to the admin dashboard
+  //       console.log("User is an admin. Navigating to admin dashboard.");
+  //       navigate('/admin');
+  //     } else {
+  //       // If the user is not an admin, handle the login success accordingly
+  //       console.log("User is not an admin. Handling non-admin login logic.");
+  //       console.log("Login successful!");
+  //       // Handle non-admin user login logic here
+  //     }
+  //   } catch (error) {
+  //     console.error("Error logging in:", error);
+  //   }
+  // };
   const handleLogin = async (event) => {
     event.preventDefault();
     const email = event.target.email.value;
@@ -86,7 +175,10 @@ const Register = () => {
         password,
       });
   
-      // Assuming your backend responds with a bearer token
+      // Log the entire response object to the console for debugging
+      console.log("Login Response:", response);
+  
+      // Assuming your backend responds with a bearer token and user data
       const token = response.headers.authorization; // Assuming the token is in the "authorization" header
       setBearerToken(token);
   
@@ -96,19 +188,27 @@ const Register = () => {
       // Set the "Authorization" header in Axios defaults for future requests
       axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
   
-      // Log the token to the console
-      console.log("Bearer Token (Login):", token);
-      console.log("Login Response:", response);
-
+      // Extract the user object from response.data
+      const user = response.data.data; // Assuming user data is nested under the "data" key
   
-      // Log a success message
-      console.log("Login successful!");
+      // Log the user data from the response
+      console.log("User Data:", user);
   
-      // Now you can use the token for authenticated requests
+      if (user.role === "admin" && user.admin === true) {
+        // If the user is an admin, navigate to the admin dashboard
+        console.log("User is an admin. Navigating to admin dashboard.");
+        navigate('/admin');
+      } else {
+        // If the user is not an admin, navigate to the home page
+        console.log("User is not an admin. Navigating to home page.");
+        navigate('/');
+      }
     } catch (error) {
       console.error("Error logging in:", error);
     }
   };
+  
+  
   
   
 

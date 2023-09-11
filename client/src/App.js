@@ -42,6 +42,8 @@ import Women from "./components/Women/Women";
 import Register from "./components/Register/Resgister";
 import Cart from "./components/Cart/Cart";
 import axios from "axios"; // Import Axios
+import Profile from "./components/Profile/Profile";
+import Admin from './components/Admin/Admin'
 
 function App() {
   const storedToken = localStorage.getItem("authToken");
@@ -87,6 +89,8 @@ function App() {
         <Route path="/women" element={<Women />} />
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart currentUser={currentUser} />} />
+        <Route path="/profile" element={<Profile/>} />
+        <Route path="/admin" element={<Admin/>} />
 
         {/* Pass currentUser as a prop */}
       </Routes>

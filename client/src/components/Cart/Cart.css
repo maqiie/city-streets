@@ -1,8 +1,9 @@
 /* Cart Container */
 .cart {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto; /* Added margin to push it down */
     padding: 20px;
+    
   }
   
   /* Cart Title */
