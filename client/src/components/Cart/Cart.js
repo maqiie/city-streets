@@ -2,56 +2,27 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Cart.css";
 
+const Cart = ({ currentUser }) => {
+  const [cartItems, setCartItems] = useState([]);
+  const [total, setTotal] = useState(0);
 
-  const Cart = ({ currentUser }) => {
-    const [cartItems, setCartItems] = useState([]);
-    const [total, setTotal] = useState(0);
+  useEffect(() => {
+    // Check if the user is authenticated
+    console.log("User:", currentUser);
 
+    if (currentUser && currentUser.cart) {
+      // Ensure currentUser and currentUser.cart are defined
+      const cartId = currentUser.cart.id; // You should obtain the cart ID dynamically
+      console.log("Cart ID:", cartId); // Log the cart ID
 
-
-// useEffect(() => {
-//   // Check if the user is authenticated
-//   console.log("User:", currentUser);
-
-//   if (currentUser && currentUser.cart) {
-//     // Ensure currentUser and currentUser.cart are defined
-//     const cartId = currentUser.cart.id; // You should obtain the cart ID dynamically
-//     console.log("Cart ID:", cartId); // Log the cart ID
-
-//     // Make a GET request to fetch the user's cart by ID
-//     // axios.get(`http://localhost:3001/carts/${cartId}`).then((response) => {
-//     //   setCartItems(response.data.cartItems);
-//     //   setTotal(response.data.total);
-//     // });
-//     axios.get(`http://localhost:3001/carts/${cartId}`).then((response) => {
-//   console.log("API Response:", response.data); // Log the entire response
-//   setCartItems(response.data.cartItems);
-//   setTotal(response.data.total);
-// });
-
-//   }
-// }, [currentUser]);
-
-useEffect(() => {
-  // Check if the user is authenticated
-  console.log("User:", currentUser);
-
-  if (currentUser && currentUser.cart) {
-    // Ensure currentUser and currentUser.cart are defined
-    const cartId = currentUser.cart.id; // You should obtain the cart ID dynamically
-    console.log("Cart ID:", cartId); // Log the cart ID
-
-    // Make a GET request to fetch the user's cart by ID
-    axios.get(`http://localhost:3001/carts/${cartId}`).then((response) => {
-      console.log("API Response:", response.data); // Log the entire response
-      setCartItems(response.data.cartItems);
-      setTotal(response.data.total);
-    });
-  }
-}, [currentUser]);
-
-  
-  
+      // Make a GET request to fetch the user's cart by ID
+      axios.get(`http://localhost:3001/carts/${cartId}`).then((response) => {
+        console.log("API Response:", response.data); // Log the entire response
+        setCartItems(response.data.cartItems);
+        setTotal(response.data.total);
+      });
+    }
+  }, [currentUser]);
 
   return (
     <div className="cart">

@@ -10,42 +10,42 @@ const Men = () => {
   const shoeData = [
     {
       id: 1,
-      name: "Men Shoe 1",
+      name: "Airforce",
       price: "$99.99",
       image:
         "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 2,
-      name: "Men Shoe 2",
+      name: "K Swiss Cr Terrati",
       price: "$89.99",
       image:
         "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 3,
-      name: "Men Shoe 2",
+      name: "Jordan's 1",
       price: "$89.99",
       image:
         "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 4,
-      name: "Men Shoe 2",
+      name: "Airmax",
       price: "$89.99",
       image:
         "https://images.unsplash.com/photo-1514989940723-e8e51635b782?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 5,
-      name: "Men Shoe 2",
+      name: "Official",
       price: "$89.99",
       image:
         "https://images.unsplash.com/photo-1603191659812-ee978eeeef76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fHNob2VzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path
     },
     {
       id: 6,
-      name: "Men Shoe 2",
+      name: "Airforce",
       price: "$89.99",
       image:
         "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60", // Replace with the actual image path

@@ -54,19 +54,12 @@ const Register = () => {
         name,
         email,
         password,
-<<<<<<< HEAD
-        password_confirmation: passwordConfirmation, // Ensure the field name matches your backend's expectations
-=======
         password_confirmation: passwordConfirmation,
->>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       });
 
       // Assuming your backend responds with a bearer token
       const token = response.headers.authorization; // Assuming the token is in the "authorization" header
       setBearerToken(token);
-<<<<<<< HEAD
-
-=======
   
       // Store the token in local storage
       localStorage.setItem("authToken", token);
@@ -74,7 +67,6 @@ const Register = () => {
       // Log the token to the console
       console.log("Bearer Token (Registration):", token);
   
->>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       // Now you can use the token for authenticated requests
     } catch (error) {
       console.error("Error registering:", error);
@@ -93,11 +85,7 @@ const Register = () => {
         email,
         password,
       });
-<<<<<<< HEAD
-
-=======
   
->>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
       // Assuming your backend responds with a bearer token
       const token = response.headers.authorization; // Assuming the token is in the "authorization" header
       setBearerToken(token);
@@ -121,11 +109,8 @@ const Register = () => {
       console.error("Error logging in:", error);
     }
   };
-<<<<<<< HEAD
-=======
   
   
->>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
 
   return (
     <div>
@@ -159,10 +144,7 @@ const Register = () => {
               <div className="flip-card__back">
                 <div className="title">Sign up</div>
                 <form className="flip-card__form" onSubmit={handleRegistration}>
-<<<<<<< HEAD
-=======
                   {/* <form className="flip-card__form" action=""> */}
->>>>>>> e4498b7ad56bcdcc01f7d5c74cc00a454fa6e759
                   <input
                     className="flip-card__input"
                     placeholder="Name"
