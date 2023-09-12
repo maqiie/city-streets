@@ -1,0 +1,81 @@
+/* ProductForm.css */
+
+body {
+    background-color: #f0f0f0; /* Light gray background */
+    font-family: Arial, sans-serif;
+  }
+  
+  .product-form-card {
+    max-width: 600px; /* Increased max-width */
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .product-form-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a slight shadow on hover */
+  }
+  
+  .product-form-container {
+    width: 100%;
+  }
+  
+  .product-form-container h2 {
+    font-size: 1.8rem; /* Larger font size */
+    margin-bottom: 20px;
+    color: #333; /* Dark gray text */
+  }
+  
+  .product-form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333; /* Dark gray text */
+  }
+  
+  .product-form-container input[type="text"],
+  .product-form-container input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .product-form-container button[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: #fff; /* White text */
+    padding: 12px 24px; /* Slightly larger padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+ 
+  /* ProductForm.css */
+
+/* ... (previous CSS styles) ... */
+
+.product-form-container button[type="submit"] {
+    background-color: #007bff; /* Blue submit button */
+    color: #fff; /* White text */
+    padding: 12px 24px; /* Slightly larger padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 1rem; /* Font size */
+  }
+  
+  .product-form-container button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  

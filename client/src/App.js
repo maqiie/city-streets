@@ -44,6 +44,7 @@ import Cart from "./components/Cart/Cart";
 import axios from "axios"; // Import Axios
 import Profile from "./components/Profile/Profile";
 import Admin from './components/Admin/Admin'
+import ProductForm from "./components/Admin/Product";
 
 function App() {
   const storedToken = localStorage.getItem("authToken");
@@ -91,6 +92,7 @@ function App() {
         <Route path="/cart" element={<Cart currentUser={currentUser} />} />
         <Route path="/profile" element={<Profile/>} />
         <Route path="/admin" element={<Admin/>} />
+        <Route path="/product" element={<ProductForm/>} />
 
         {/* Pass currentUser as a prop */}
       </Routes>

@@ -130,7 +130,7 @@ body {
     font-weight: bold;
   }
   /* <---------add to cart button----> */
-  .CartBtn {
+  .CartBtn1 {
     width: 140px;
     height: 40px;
     border-radius: 12px;
@@ -146,7 +146,7 @@ body {
     position: relative;
   }
   
-  .IconContainer {
+  .IconContainer1 {
     position: absolute;
     left: -50px;
     width: 30px;
@@ -165,7 +165,7 @@ body {
     border-radius: 1px;
   }
   
-  .text {
+  .text1 {
     height: 100%;
     width: fit-content;
     display: flex;
@@ -178,18 +178,18 @@ body {
     font-weight: 600;
   }
   
-  .CartBtn:hover .IconContainer {
+  .CartBtn1:hover .IconContainer1 {
     transform: translateX(58px);
     border-radius: 40px;
     transition-duration: .5s;
   }
   
-  .CartBtn:hover .text {
+  .CartBtn1:hover .text1 {
     transform: translate(10px,0px);
     transition-duration: .5s;
   }
   
-  .CartBtn:active {
+  .CartBtn1:active {
     transform: scale(0.95);
     transition-duration: .5s;
   }

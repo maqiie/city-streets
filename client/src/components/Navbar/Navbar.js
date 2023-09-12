@@ -31,8 +31,9 @@ function Navbar() {
           </a>
         </li>
         <li>
+          
           <a href="/register">
-            <FaUser className="icon" /> Profile
+            <FaUser className="icon" /> Sign_In
           </a>
         </li>
       </ul>
