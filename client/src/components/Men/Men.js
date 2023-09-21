@@ -143,6 +143,7 @@ const Men = () => {
               <p class="text1">Add to Cart</p>
             </button>
             {/* Add more shoe details as needed */}
+            {/*  */}
           </div>
         ))}
       </div>
