@@ -106,6 +106,11 @@ const Women  = () => {
           </li>
           <li>
             <a href="/category/formal">
+              <GiShoebillStork /> Did't get a shoe?
+            </a>
+          </li>
+          <li>
+            <a href="/category/formal">
               <FaShoePrints /> Others
             </a>
           </li>
