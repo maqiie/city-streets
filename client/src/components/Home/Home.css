@@ -129,3 +129,30 @@ img {
   .button:hover .icon .icon-shere {
     display: flex;
   }
+
+
+
+
+/* Add media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+
+  .image-box,
+  .triangle-box {
+    /* Adjust positioning or other styles as needed for small screens */
+  }
+
+  .text-overlay {
+    /* Adjust positioning or other styles as needed for small screens */
+  }
+
+  .button {
+    /* Adjust button styles for small screens */
+    font-size: 14px;
+    padding: 0.25em 0.5em;
+  }
+
+  /* You can add more specific adjustments for small screens here */
+}
