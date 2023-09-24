@@ -69,6 +69,7 @@ body {
     width: 70%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
   
   /* .shoe-card {
@@ -193,3 +194,22 @@ body {
     transform: scale(0.95);
     transition-duration: .5s;
   }
+
+
+
+  @media (min-width: 768px) {
+    .shoe-card {
+      width: calc(33.33% - 10px); /* Reduce card width and spacing */
+      margin-right: 0; /* Remove right margin to prevent overflow */
+      box-sizing: border-box; /* Ensure padding and borders don't add to card width */
+      padding: 10px; /* Add padding for spacing */
+    }
+  }
+  
+
+/* For small screens, display one card per row */
+@media (max-width: 767px) {
+  .shoe-card {
+    width: calc(100% - 20px); /* Full width with spacing in between */
+  }
+}
